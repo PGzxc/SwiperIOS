@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BCCA9BB6DDE820A179CE0F5F /* Pods_SwiperIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DDB0AA7B1A2E2583F2F12D /* Pods_SwiperIOS.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		33447ABD2EEDAFDB00014533 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,24 +28,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15DDB0AA7B1A2E2583F2F12D /* Pods_SwiperIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiperIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2904CB82C6F9616F863D6B00 /* Pods-SwiperIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiperIOS.release.xcconfig"; path = "Target Support Files/Pods-SwiperIOS/Pods-SwiperIOS.release.xcconfig"; sourceTree = "<group>"; };
 		33447AAF2EEDAFD900014533 /* SwiperIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiperIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33447ABC2EEDAFDB00014533 /* SwiperIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiperIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33447AC62EEDAFDB00014533 /* SwiperIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiperIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B63FE80C8CD7FC52A07C1824 /* Pods-SwiperIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiperIOS.debug.xcconfig"; path = "Target Support Files/Pods-SwiperIOS/Pods-SwiperIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		33447AB12EEDAFD900014533 /* SwiperIOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = SwiperIOS;
 			sourceTree = "<group>";
 		};
 		33447ABF2EEDAFDB00014533 /* SwiperIOSTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = SwiperIOSTests;
 			sourceTree = "<group>";
 		};
 		33447AC92EEDAFDB00014533 /* SwiperIOSUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = SwiperIOSUITests;
 			sourceTree = "<group>";
 		};
@@ -52,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCA9BB6DDE820A179CE0F5F /* Pods_SwiperIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +93,8 @@
 				33447ABF2EEDAFDB00014533 /* SwiperIOSTests */,
 				33447AC92EEDAFDB00014533 /* SwiperIOSUITests */,
 				33447AB02EEDAFD900014533 /* Products */,
+				41C35D0B548091B50BBD8A8D /* Pods */,
+				555822AC22D1049FE49B84CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +108,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		41C35D0B548091B50BBD8A8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B63FE80C8CD7FC52A07C1824 /* Pods-SwiperIOS.debug.xcconfig */,
+				2904CB82C6F9616F863D6B00 /* Pods-SwiperIOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		555822AC22D1049FE49B84CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15DDB0AA7B1A2E2583F2F12D /* Pods_SwiperIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33447AD02EEDAFDB00014533 /* Build configuration list for PBXNativeTarget "SwiperIOS" */;
 			buildPhases = (
+				B830F75C7F8F1939940999FB /* [CP] Check Pods Manifest.lock */,
 				33447AAB2EEDAFD900014533 /* Sources */,
 				33447AAC2EEDAFD900014533 /* Frameworks */,
 				33447AAD2EEDAFD900014533 /* Resources */,
+				4B87DBEF7FAE85F7F8C96FA0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -111,8 +146,6 @@
 				33447AB12EEDAFD900014533 /* SwiperIOS */,
 			);
 			name = SwiperIOS;
-			packageProductDependencies = (
-			);
 			productName = SwiperIOS;
 			productReference = 33447AAF2EEDAFD900014533 /* SwiperIOS.app */;
 			productType = "com.apple.product-type.application";
@@ -134,8 +167,6 @@
 				33447ABF2EEDAFDB00014533 /* SwiperIOSTests */,
 			);
 			name = SwiperIOSTests;
-			packageProductDependencies = (
-			);
 			productName = SwiperIOSTests;
 			productReference = 33447ABC2EEDAFDB00014533 /* SwiperIOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -157,8 +188,6 @@
 				33447AC92EEDAFDB00014533 /* SwiperIOSUITests */,
 			);
 			name = SwiperIOSUITests;
-			packageProductDependencies = (
-			);
 			productName = SwiperIOSUITests;
 			productReference = 33447AC62EEDAFDB00014533 /* SwiperIOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -230,6 +259,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B87DBEF7FAE85F7F8C96FA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiperIOS/Pods-SwiperIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiperIOS/Pods-SwiperIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiperIOS/Pods-SwiperIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B830F75C7F8F1939940999FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiperIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		33447AAB2EEDAFD900014533 /* Sources */ = {
@@ -307,7 +378,7 @@
 				DEVELOPMENT_TEAM = 34LPAHZG4A;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -371,7 +442,7 @@
 				DEVELOPMENT_TEAM = 34LPAHZG4A;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -392,6 +463,7 @@
 		};
 		33447AD12EEDAFDB00014533 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B63FE80C8CD7FC52A07C1824 /* Pods-SwiperIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -424,6 +496,7 @@
 		};
 		33447AD22EEDAFDB00014533 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2904CB82C6F9616F863D6B00 /* Pods-SwiperIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

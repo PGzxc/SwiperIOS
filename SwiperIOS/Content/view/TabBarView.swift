@@ -28,6 +28,16 @@ enum TabItem: Int, CaseIterable {
         case .me: return ""
         }
     }
+    
+    var selectedColor: Color {
+        switch self {
+        case .home: return Color(red: 0/255, green: 122/255, blue: 255/255) // #007AFF
+        case .album: return Color(red: 0/255, green: 184/255, blue: 148/255) // #00B894
+        case .publish: return Color(red: 255/255, green: 108/255, blue: 0/255) // #FF6C00
+        case .message: return Color(red: 255/255, green: 78/255, blue: 78/255) // #FF4E4E
+        case .me: return Color(red: 103/255, green: 58/255, blue: 183/255) // #673AB7
+        }
+    }
 }
 
 // 底部导航项组件
@@ -43,10 +53,10 @@ struct TabBarItem: View {
                 // 只有当iconName不为空时才显示图标
                 if !item.iconName.isEmpty {
                     if item == .publish {
-                        // 发布图标：007AFF蓝色填充，白色+号
+                        // 发布图标使用其特定颜色
                         ZStack {
                             Circle()
-                                .fill(Color(red: 0/255, green: 122/255, blue: 255/255)) // #007AFF
+                                .fill(item.selectedColor) // 使用selectedColor
                                 .frame(width: 36, height: 36)
                             Image(systemName: "plus")
                                 .font(.system(size: 20, weight: .bold))
@@ -56,7 +66,7 @@ struct TabBarItem: View {
                     } else {
                         Image(systemName: item.iconName)
                             .font(.system(size: 24))
-                            .foregroundStyle(isSelected ? .black : .gray)
+                            .foregroundStyle(isSelected ? item.selectedColor : .gray)
                     }
                 }
                 
@@ -66,7 +76,7 @@ struct TabBarItem: View {
                     ZStack {
                         Text(item.title)
                         .font(isSelected ? .system(size: 16, weight: .bold) : .system(size: 13, weight: .regular))
-                        .foregroundStyle(isSelected ? .black : .gray)
+                        .foregroundStyle(isSelected ? item.selectedColor : .gray)
                         
                         // 消息红点提示 - 位于文字右上角
                         if item == .message && hasNewMessage {
@@ -110,5 +120,8 @@ struct TabBar: View {
         }
         .padding(.bottom, 20)
         .padding(.top, 10)
+        .background(Color.white)
+        .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: -5)
+        .edgesIgnoringSafeArea(.bottom)
     }
 }

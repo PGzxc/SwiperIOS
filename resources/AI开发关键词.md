@@ -32,7 +32,36 @@
 弹窗中间隔线的颜色为F2F2F2
 弹窗最上面的2个分割线透明度0.4
 弹窗最上面的2个分割线高度从0.5修改为1
+```
 
+### v2.0版本(网络访问框架)
+
+```
+基于最流行的网络访问框架Alamofire进行封装
+1、网络请求封装
+ -封装目录：SwiperIOS/api目录下
+ -baseurl为：https://api.apiopen.top/
+ -支持Get、Post等请求
+ -支持参数编码和自定义请求头
+2、错误处理
+-错误枚举：错误类型
+3、请求结果：
+- 使用AlamofireObjectMapper进行扩展
+- 将JSON数据转换为swift对象
+- 请求结果封装到：SwiperIOS/api/bean目录下
+- 我已写了一个bean示例：VideoData，其他参考此示例
+4、真实请求：
+- 封装到：SwiperIOS/api/APIService.swift文件下
+- 基于SwiperIOS/api/APIClient.swift封装实现功能
+- 执行网络请求结果为bean目录下对应实体类(参考VideoData)
+- 失败和成功返回结果：参考VideoData
+- APIService支持尾随闭包，在页面中调用时直接请求返回结果
+- Home.swift页面调用APIService.swift执行真实请求
+
+
+APIService.swift中添加获取图片列表接口，接口在baseurl后拼接api/images，参数同getVideoList中2个参数，返回结果为ImageData，在Album页面中调用接口测试真实请求
+
+底部导航栏设置颜色，区分内容页面
 ```
 
 
