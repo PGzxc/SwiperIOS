@@ -64,5 +64,15 @@ APIService.swift中添加获取图片列表接口，接口在baseurl后拼接api
 底部导航栏设置颜色，区分内容页面
 ```
 
+### v3.0 MVC框架改MVVM框架
 
+```
+项目框架修改(MVC到MVVM)
+1. 修改前(如Home.swift与Album.swift)：逻辑与界面都在一个页面中，混乱且不利于维护
+2.修改后：
+ - Home与Album文件夹下新增vidwmodel文件夹存放对应的viewmodel(如HomeViewModel与AlbumViewModel)
+ - Viewmodel中处理逻辑：如@State修饰的变量与网络请求
+ - 页面(如Home.swift与Album.swift)中调用viewmodel并显示界面
+ - 自定义页面：自定义界面(如ImageRow或VideoRow)，存放到对应的文件夹/view目录下(如Home/view/VideoRow.swift)
+```
 

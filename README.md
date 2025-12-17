@@ -33,6 +33,28 @@
 * 真正请求：APIService：基于APIClient执行请求，尾随闭包
 * 执行请求后显示：Home(首页)、Album(图集页)
 
+### v3.0 MVC框架改MVVM框架
+
+* 创建ViewModel文件结构
+
+  - 在 Home 文件夹下创建了 viewmodel 文件夹和 HomeViewModel.swift 文件
+  - 在 Album 文件夹下创建了 viewmodel 文件夹和 AlbumViewModel.swift 文件
+* 实现ViewModel逻辑
+
+  - 将页面中的 @State 变量迁移到ViewModel中作为 @Published 属性
+  - 在ViewModel中实现网络请求逻辑，如 loadVideos() 和 loadImages() 方法
+  - 使用 ObservableObject 协议使ViewModel可被View观察
+* 更新页面文件
+
+  - 在 Home.swift 中使用 @StateObject 引用 HomeViewModel ，并将UI绑定到ViewModel的状态
+  - 在 Album.swift 中使用 @StateObject 引用 AlbumViewModel ，并将UI绑定到ViewModel的状态
+  - 移除了页面中直接的网络请求和状态管理逻辑
+* Home页面(Alb um同)组件提取
+
+  - 在 Home 文件夹下创建了 view 目录
+  - 将 VideoRow 从 Home.swift 中提取出来，保存到 Home/view/VideoRow.swift 文件中
+  - 从 Home.swift 中移除了 VideoRow 的定义
+
 ## 五 效果图
 
 ### v1.0 底部导航栏框架-效果图
