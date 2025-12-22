@@ -12,6 +12,7 @@ struct SwiperIOSApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(.dark) // 强制深色模式，确保状态栏文字为白色
         }
     }
 }

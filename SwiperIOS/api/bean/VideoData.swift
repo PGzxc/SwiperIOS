@@ -36,7 +36,9 @@ class VideoInfo: Mappable,Identifiable {
     var uploadTime: String? //上传时间
     var commentsCont: Int? //评论数
     var likesCont: Int? //点赞数
-    var sharesCont: Int? //分享数
+    var sharesCont: Int? //分享数（旧字段）
+    var shareCont: Int? //分享数（新字段）
+    var collectCont: Int? //收藏数
     
     
     required init?(map: Map) {
@@ -55,6 +57,13 @@ class VideoInfo: Mappable,Identifiable {
         commentsCont <- map["commentsCont"]
         likesCont <- map["likesCont"]
         sharesCont <- map["sharesCont"]
+        shareCont <- map["shareCont"]
+        collectCont <- map["collectCont"]
+        
+        // 兼容老字段：若新字段为空且旧字段不为空，则赋值到新字段
+        if shareCont == nil, let old = sharesCont {
+            shareCont = old
+        }
     }
 }
 

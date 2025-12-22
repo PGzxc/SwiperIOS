@@ -55,6 +55,14 @@
   - 将 VideoRow 从 Home.swift 中提取出来，保存到 Home/view/VideoRow.swift 文件中
   - 从 Home.swift 中移除了 VideoRow 的定义
 
+### v4.0 首页(仿抖音)
+
+* App沉浸式，状态栏透明
+* ContentView是Flex布局，除底部TabBar，内容区域为flexGrow(1)
+* 顶部标签栏：左搜索+中(同城、关注、推荐)+右加号
+* 切换标签栏：1-标签栏切换可滑动/点击；2-分别对应City(同城)、Focus(关注)、Recommend(推荐)
+* 标签对应页面：1-视频(平铺页面)；2-右侧操作栏；3-底部视频信息栏
+
 ## 五 效果图
 
 ### v1.0 底部导航栏框架-效果图
@@ -69,6 +77,12 @@
 | :-------: | :-------: |
 | ![][v2-3] |           |
 
+### v4.0 首页(仿抖音)-效果图
+
+| ![][v4-1] | ![][v4-2] | ![][v4-3] |
+| :-------: | :-------: | :-------: |
+| ![][v4-4] | ![][v4-5] |           |
+
 
 
 [v1-1]:resources/v1/v1-1-home.png
@@ -80,3 +94,9 @@
 [v2-1]:resources/v2/v2-1-home.png
 [v2-2]:resources/v2/v2-2-album.png
 [v2-3]:resources/v2/v2-3-pub.png
+
+[v4-1]:resources/v4/v4-1-home-load.png
+[v4-2]:resources/v4/v4-2-home-play.png
+[v4-3]:resources/v4/v4-3-home-state.png
+[v4-4]:resources/v4/v4-4-focus-state.png
+[v4-5]:resources/v4/v4-5-home-city.png
