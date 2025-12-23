@@ -77,6 +77,29 @@ class APIService {
         )
     }
     
+    func getImageList(
+        page: Int,
+        size: Int,
+        category: String?,
+        completion: @escaping (Result<APIResponse<[ImageInfo]>, APIError>) -> Void
+    ) {
+        var parameters: Parameters = [
+            "page": page,
+            "size": size
+        ]
+        if let cat = category {
+            parameters["category"] = cat
+        }
+        APIClient.shared.requestArray(
+            "api/images",
+            method: .get,
+            parameters: parameters,
+            headers: nil,
+            encoding: URLEncoding.default,
+            completion: completion
+        )
+    }
+    
     // MARK: - Image API Methods (Async/Await)
     
     // Get image list with async/await
